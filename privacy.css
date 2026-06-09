@@ -1,0 +1,111 @@
+/* ========================================
+   PRIVACY POLICY
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: #F8F5EF;
+
+    color: #3A403D;
+
+    font-family: system-ui, sans-serif;
+
+    line-height: 1.9;
+}
+
+/* CONTENITORE */
+
+.privacy-container {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 8rem 2rem;
+}
+
+/* TITOLI */
+
+h1 {
+
+    font-family: "Newsreader", serif;
+
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+
+    font-weight: 300;
+
+    line-height: 1.1;
+
+    margin-bottom: 4rem;
+}
+
+h2 {
+
+    font-family: "Newsreader", serif;
+
+    font-size: 2rem;
+
+    font-weight: 300;
+
+    margin-top: 4rem;
+
+    margin-bottom: 1.5rem;
+}
+
+/* TESTI */
+
+p {
+
+    color: rgba(58,64,61,.85);
+
+    margin-bottom: 1.5rem;
+
+    max-width: 700px;
+}
+
+/* LINK RITORNO */
+
+.back-link {
+
+    display: inline-block;
+
+    margin-top: 5rem;
+
+    text-decoration: none;
+
+    color: #3A403D;
+
+    border-bottom: 1px solid rgba(58,64,61,.25);
+
+    padding-bottom: .2rem;
+
+    transition: .3s ease;
+}
+
+.back-link:hover {
+
+    border-color: #3A403D;
+
+    transform: translateX(-4px);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .privacy-container {
+
+        padding: 5rem 1.5rem;
+    }
+
+    h2 {
+
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,1283 @@
+:root {
+  --bg: #f7f4ee;
+  --salvia: #7f9a89;
+  --salvia-dark: #687d70;
+  --card: #e8e0d4;
+  --text: #2f3431;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(4rem, 8vw, 8rem) clamp(4rem, 10vw, 10rem);
+
+  gap: 5rem;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+/* TITOLO */
+
+h1 {
+  font-family: "Newsreader", serif;
+  font-size: clamp(4rem, 10vw, 7rem);
+  line-height: 0.92;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  max-width: 8ch;
+  color: #3a403d;
+}
+
+/* TESTO */
+
+.hero-text {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1.7;
+
+  max-width: 28ch;
+
+  color: #4b514e;
+
+  font-weight: 300;
+}
+
+/* CTA */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  margin-top: 2.5rem;
+
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  border: 1px solid rgba(127, 154, 137, 0.5);
+
+  color: var(--text);
+
+  background: transparent;
+
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--salvia);
+  color: white;
+  border-color: var(--salvia);
+}
+
+/* AUTORE */
+
+.hero-author {
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+.name {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.6rem;
+
+  font-weight: 400;
+
+  color: var(--text);
+
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: 0.8rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(47, 52, 49, 0.55);
+}
+
+/* PLACEHOLDER FOTO */
+
+  
+/* ========================================
+   PENSIERI
+======================================== */
+
+/* ========================================
+   SCROLL
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero,
+.thought-section {
+  scroll-snap-align: start;
+}
+
+/* ========================================
+   SEZIONE PENSIERI
+======================================== */
+
+.thought-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 2rem;
+}
+
+.thought {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+
+  gap: 1rem;
+
+  max-width: 900px;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+}
+
+.thought.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ========================================
+   PAROLA PRINCIPALE
+======================================== */
+
+.thought-main {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+
+  transition-delay: 0s;
+}
+
+/* ========================================
+   RIFLESSIONE
+======================================== */
+
+.thought-sub {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+
+  font-weight: 300;
+
+  line-height: 1.4;
+
+  color: rgba(58, 64, 61, 0.75);
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+
+  transition-delay: 0.7s;
+}
+
+/* ========================================
+   ENTRATA NEL VIEWPORT
+======================================== */
+
+.thought.visible .thought-main,
+.thought.visible .thought-sub {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+/* ========================================
+   JESSICA
+======================================== */
+
+.about-jessica {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 8rem 2rem;
+}
+
+.about-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+
+  font-weight: 200;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+
+  margin-bottom: 4rem;
+}
+
+.jessica-photo {
+  width: 100%;
+
+  width: min(420px, 90%);
+
+  border-radius: 24px;
+
+  display: block;
+
+  margin-bottom: 3rem;
+}
+
+.jessica-name {
+  font-family: "Inter", sans-serif;
+
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  color: #2f3431;
+
+  margin-bottom: 0.5rem;
+}
+
+.jessica-role {
+  font-size: 1.1rem;
+
+  color: rgba(47, 52, 49, 0.65);
+
+  margin-bottom: 3rem;
+}
+
+.jessica-text {
+  max-width: 700px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.jessica-text p {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1.8;
+
+  color: #4b514e;
+}
+/* ========================================
+   ANIMAZIONE SEZIONE JESSICA
+======================================== */
+
+.reveal,
+.reveal-photo,
+.reveal-name,
+.reveal-text {
+  opacity: 0;
+
+  transform: translateY(30px);
+}
+
+/* Titolo */
+
+.reveal {
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+}
+
+/* Foto */
+
+.reveal-photo {
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+
+  transition-delay: 0.3s;
+}
+
+/* Nome e professione */
+
+.reveal-name {
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+
+  transition-delay: 0.7s;
+}
+
+/* Testo */
+
+.reveal-text {
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+
+  transition-delay: 1.1s;
+}
+
+/* Stato visibile */
+
+.reveal.visible,
+.reveal-photo.visible,
+.reveal-name.visible,
+.reveal-text.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+.reveal-title {
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+}
+
+.reveal-title.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+/* ========================================
+   TEMI DI PERCORSO
+======================================== */
+
+.areas-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 8rem 2rem;
+}
+
+.areas-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3rem, 6vw, 5.5rem);
+
+  font-weight: 200;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+
+  text-align: center;
+
+  max-width: 12ch;
+
+  margin-bottom: 8rem;
+}
+/* ========================================
+   COSTELLAZIONE TEMI
+======================================== */
+
+.areas-cloud {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  height: 1000px;
+
+  margin: 0 auto;
+}
+
+.area {
+  position: absolute;
+
+  max-width: 280px;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+}
+
+.area.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.area h3 {
+  font-family: "Newsreader", serif;
+
+  font-size: 2.8rem;
+
+  font-weight: 300;
+
+  color: #3a403d;
+
+  margin-bottom: 0.8rem;
+}
+
+.area p {
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.75);
+}
+
+/* POSIZIONI */
+
+.area-1 {
+  top: 40px;
+  left: 42%;
+
+  transition-delay: 0.1s;
+}
+
+.area-2 {
+  top: 250px;
+  left: 5%;
+
+  transition-delay: 0.3s;
+}
+
+.area-3 {
+  top: 280px;
+  right: 5%;
+
+  transition-delay: 0.5s;
+}
+
+.area-4 {
+  top: 500px;
+  left: 38%;
+
+  transition-delay: 0.7s;
+}
+
+.area-5 {
+  top: 720px;
+  left: 10%;
+
+  transition-delay: 0.9s;
+}
+
+.area-6 {
+  top: 760px;
+  right: 8%;
+
+  transition-delay: 1.1s;
+}
+/* ========================================
+   STUDIO
+======================================== */
+
+.studio-section {
+  padding: 12rem 2rem;
+
+  text-align: center;
+}
+
+.studio-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  font-weight: 300;
+
+  line-height: 1.1;
+
+  color: #3a403d;
+
+  margin-bottom: 8rem;
+}
+
+.studio-image-wrapper {
+  max-width: 450px;
+
+  margin: 0 auto;
+
+  opacity: 0;
+
+  transform: translateY(40px) scale(1.03);
+
+  transition:
+    opacity 2s ease,
+    transform 2.5s ease;
+}
+
+.studio-image-wrapper.visible {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+}
+
+.studio-image {
+  width: 100%;
+
+  display: block;
+
+  border-radius: 24px;
+}
+
+.studio-text {
+  max-width: 700px;
+
+  margin: 5rem auto 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.studio-text p {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.8rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.85);
+}
+/* ========================================
+   COME LAVORA JESSICA
+======================================== */
+
+.method-section {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 10rem 2rem;
+
+  text-align: center;
+}
+
+.method-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  font-weight: 200;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+
+  max-width: 10ch;
+
+  margin-bottom: 6rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+}
+
+.method-title.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.method-text {
+  max-width: 700px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+
+  transition-delay: 0.4s;
+}
+
+.method-text.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.method-text p {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.6rem;
+
+  line-height: 1.8;
+
+  font-weight: 300;
+
+  color: rgba(58, 64, 61, 0.85);
+}
+/* ========================================
+   VALORI DEL PERCORSO
+======================================== */
+
+.values-section {
+  position: relative;
+
+  max-width: 1200px;
+
+  height: 900px;
+
+  margin: 0 auto;
+
+  padding: 8rem 2rem;
+}
+
+.value {
+  position: absolute;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+}
+
+.value.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.value span {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+}
+.value-1 {
+  top: 80px;
+  left: 45%;
+
+  transition-delay: 0.2s;
+}
+
+.value-2 {
+  top: 360px;
+  left: 10%;
+
+  transition-delay: 0.6s;
+}
+
+.value-3 {
+  top: 620px;
+  right: 8%;
+
+  transition-delay: 1s;
+}
+/* ========================================
+   SEZIONE FINALE
+======================================== */
+
+.final-section {
+  min-height: 100vh;
+
+  padding: 12rem 2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* TITOLO */
+
+.final-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(4rem, 8vw, 6rem);
+
+  font-weight: 200;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+
+  text-align: center;
+
+  color: #3a403d;
+
+  margin-bottom: 8rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+}
+
+.final-title.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* FORMAZIONE */
+
+.education {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin-bottom: 8rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+
+  transition-delay: 0.3s;
+}
+
+.education.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.education h3 {
+  font-family: "Newsreader", serif;
+
+  font-size: 2.5rem;
+
+  font-weight: 300;
+
+  margin-bottom: 4rem;
+
+  color: #3a403d;
+}
+
+.education-item {
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 2rem;
+
+  margin-bottom: 3rem;
+}
+
+
+
+
+
+.education-item strong {
+  display: block;
+
+  font-weight: 500;
+
+  margin-bottom: 0.6rem;
+
+  line-height: 1.5;
+}
+
+.education-item p {
+  color: rgba(58, 64, 61, 0.75);
+
+  line-height: 1.7;
+}
+/* FORMAZIONE TIME LINE*/
+.timeline-section {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 8rem 2rem;
+}
+
+.timeline {
+  position: relative;
+
+  padding-left: 80px;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 24px;
+
+  top: 0;
+
+  bottom: 0;
+
+  width: 1px;
+
+  background: rgba(58, 64, 61, 0.15);
+}
+
+.timeline-item {
+  position: relative;
+
+  margin-bottom: 5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -65px;
+
+  top: 10px;
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #3a403d;
+}
+
+.year {
+  display: block;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+
+  color: rgba(58, 64, 61, 0.5);
+
+  margin-bottom: 0.8rem;
+}
+
+.timeline-content h3 {
+  font-family: "Newsreader", serif;
+
+  font-size: 2rem;
+
+  font-weight: 300;
+
+  color: #3a403d;
+
+  margin-bottom: 0.6rem;
+}
+
+.timeline-content p {
+  color: rgba(58, 64, 61, 0.7);
+
+  line-height: 1.8;
+}
+
+/* CONTATTI */
+
+.contacts {
+  width: 100%;
+
+  max-width: 900px;
+
+  text-align: left;
+
+  margin-bottom: 6rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 1.8s ease,
+    transform 1.8s ease;
+
+  transition-delay: 0.6s;
+}
+
+.contacts.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.contacts h3 {
+  font-family: "Newsreader", serif;
+
+  font-size: 2.5rem;
+
+  font-weight: 300;
+
+  margin-bottom: 3rem;
+
+  color: #3a403d;
+}
+
+.contacts p {
+  margin-bottom: 1.2rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.85);
+}
+
+/* CTA */
+
+.final-cta {
+  margin-top: 2rem;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-logo {
+  position: absolute;
+
+  right: -50px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.hero-logo img {
+  width: 450px;
+
+  opacity: 0.1;
+}
+
+.hero-content h1,
+.hero-text,
+.hero-author {
+  position: relative;
+
+  z-index: 1;
+}
+/* ========================================
+   CHIUSURA FINALE
+======================================== */
+
+.closing-section {
+  text-align: center;
+
+  padding: 10rem 2rem 6rem;
+}
+
+.closing-logo {
+  width: 180px;
+
+  height: auto;
+
+  opacity: 0.9;
+
+  margin-bottom: 1rem;
+}
+
+.closing-signature {
+  font-family: "Cormorant Garamond", serif;
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  font-size: 2.8rem;
+
+  color: #3a403d;
+
+  margin-bottom: 2rem;
+}
+
+.closing-quote {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.4rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.75);
+
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+.site-footer {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 2rem;
+
+  border-top: 1px solid rgba(58, 64, 61, 0.08);
+
+  font-size: 0.9rem;
+
+  color: rgba(58, 64, 61, 0.55);
+}
+/* ========================================
+   DOVE RICEVO
+======================================== */
+
+.location-section {
+  max-width: 700px;
+padding: 10rem 2rem 14rem;
+  margin: 0 auto;
+
+  padding: 10rem 2rem;
+
+  text-align: center;
+}
+
+.location-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  font-weight: 300;
+
+  line-height: 1.1;
+
+  color: #3a403d;
+
+  margin-bottom: 3rem;
+}
+
+.location-address {
+  font-size: 1.15rem;
+
+  line-height: 2;
+
+  color: #3a403d;
+
+  margin-bottom: 1.5rem;
+}
+
+.location-info {
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.65);
+
+  margin-bottom: 4rem;
+}
+
+/* PULSANTE MAPS */
+
+.location-link {
+  display: inline-block;
+
+  margin-top: 1.5rem;
+
+  text-decoration: none;
+
+  color: rgba(58, 64, 61, 0.65);
+
+  font-size: 0.95rem;
+
+  transition: all 0.3s ease;
+}
+
+.location-link:hover {
+  color: #3a403d;
+
+  transform: translateX(4px);
+}
+
+.footer-legal {
+  text-align: center;
+
+  margin-top: 1rem;
+
+  margin-bottom: 3rem;
+}
+
+.footer-legal a {
+  text-decoration: none;
+
+  color: rgba(58, 64, 61, 0.55);
+
+  font-size: 0.9rem;
+
+  transition: 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #3a403d;
+}
+
+@media (max-width: 768px) {
+  .areas-cloud {
+    position: static;
+
+    height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5rem;
+
+    align-items: center;
+  }
+
+  .area {
+    position: static;
+
+    max-width: 280px;
+
+    text-align: center;
+  }
+
+  .area h3 {
+    font-size: 3rem;
+  }
+
+  .area p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+
+  .hero-logo {
+
+    right: 50%;
+
+    top: 20%;
+
+    transform: translateX(50%);
+  }
+
+  .hero-logo img {
+
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+
+  .site-footer {
+
+    flex-direction: column;
+
+    gap: .5rem;
+
+    text-align: center;
+  }
+}
