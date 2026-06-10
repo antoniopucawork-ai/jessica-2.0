@@ -189,6 +189,33 @@ html {
 
   transform: translateY(0);
 }
+/* ========================================
+   CTA INTERMEDIA
+======================================== */
+
+.mini-cta {
+
+    text-align: center;
+
+    padding: 4rem 2rem 8rem;
+}
+
+.mini-cta-text {
+
+    font-family: "Newsreader", serif;
+
+    font-size: clamp(1.6rem, 3vw, 2rem);
+
+    font-weight: 300;
+
+    line-height: 1.6;
+
+    color: rgba(58, 64, 61, 0.8);
+
+    max-width: 600px;
+
+    margin: 0 auto 2.5rem;
+}
 
 /* ========================================
    PAROLA PRINCIPALE
