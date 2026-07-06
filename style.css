@@ -140,9 +140,9 @@ h1 {
 /* ========================================
    SCROLL
 ======================================== */
-
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 .hero,
@@ -1249,6 +1249,44 @@ padding: 10rem 2rem 14rem;
 .footer-legal a:hover {
   color: #3a403d;
 }
+/* VALUES */
+
+.values-section {
+
+  position: static;
+
+  height: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 40vh;
+
+  padding: 15vh 2rem;
+}
+
+.value {
+
+  position: static;
+
+  opacity: 1;
+
+  transform: none;
+
+  text-align: center;
+}
+
+.value span {
+
+  font-size: clamp(3rem, 13vw, 4.5rem);
+
+  display: block;
+}
 
 @media (max-width: 768px) {
 
@@ -1287,6 +1325,37 @@ padding: 10rem 2rem 14rem;
     font-size: 0.7rem;
     letter-spacing: 0.15em;
   }
+ /* SCROLL GUIDATO */
+
+html {
+
+  scroll-snap-type: y proximity;
+
+}
+
+.thought-section {
+
+  min-height: 100svh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 2rem;
+
+  scroll-snap-align: start;
+
+}
+
+.thought {
+
+  max-width: 90%;
+
+  margin: 0 auto;
+
+}
 
   /* PENSIERI */
 
@@ -1378,4 +1447,58 @@ padding: 10rem 2rem 14rem;
     text-align: center;
   }
 
+}
+/* ==========================
+   VALORI - MOBILE
+========================== */
+
+.values-section {
+
+  position: relative;
+
+  height: 170vh;
+
+  padding: 0 2rem;
+}
+
+.value {
+
+  position: absolute;
+
+  left: 50% !important;
+
+  right: auto !important;
+
+  transform: translateX(-50%) translateY(30px);
+
+  width: 100%;
+
+  text-align: center;
+}
+
+.value.visible {
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.value span {
+
+  font-size: clamp(3rem, 13vw, 4.8rem);
+
+  white-space: nowrap;
+}
+
+.value-1 {
+
+  top: 8vh;
+}
+
+.value-2 {
+
+  top: 65vh;
+}
+
+.value-3 {
+
+  top: 122vh;
 }
